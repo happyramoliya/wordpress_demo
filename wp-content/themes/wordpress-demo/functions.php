@@ -176,3 +176,44 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+function get_latest_category_posts() {
+    // Try to get the data from the transient
+    $cached_posts = get_transient('latest_category_posts');
+
+    if (false === $cached_posts) {
+        // If the transient doesn't exist or has expired, query the latest posts
+        $args = array(
+            'category_name' => 'cat1', // Replace with your desired category slug
+            'posts_per_page' => 2, // Number of posts to retrieve
+            'orderby' => 'date',
+            'order' => 'DESC',
+        );
+
+        $query = new WP_Query($args);
+
+        // Check if there are posts
+        if ($query->have_posts()) {
+            $cached_posts = array();
+
+            while ($query->have_posts()) {
+                $query->the_post();
+                $post_data = array(
+                    'title' => get_the_title(),
+                    'permalink' => get_permalink(),
+                );
+                $cached_posts[] = $post_data;
+            }
+
+            // Cache the data for 12 hours (12 hours * 60 minutes * 60 seconds)
+            set_transient('latest_category_posts', $cached_posts, 12 * 60 * 60);
+
+            // Reset the post data
+            wp_reset_postdata();
+        } else {
+            // If no posts were found, set an empty array in the transient to avoid repeated queries
+            set_transient('latest_category_posts', array(), 12 * 60 * 60);
+        }
+    }
+
+    return $cached_posts;
+}

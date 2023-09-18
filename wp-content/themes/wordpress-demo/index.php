@@ -39,6 +39,11 @@ get_header();
 				 */
 				get_template_part( 'template-parts/content', get_post_type() );
 
+				$latest_posts = get_latest_category_posts();
+
+				foreach ($latest_posts as $post) {
+					echo '<a href="' . $post['permalink'] . '">' . $post['title'] . '</a><br>';
+				}
 			endwhile;
 
 			the_posts_navigation();
