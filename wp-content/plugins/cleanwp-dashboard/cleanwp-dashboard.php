@@ -42,3 +42,8 @@ function cleanwp_dashboard_activate() {
 
 // Hook into plugin activation
 register_activation_hook(__FILE__, 'cleanwp_dashboard_activate');
+
+
+
+
+
