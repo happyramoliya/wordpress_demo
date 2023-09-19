@@ -32,6 +32,12 @@ function cleanwp_dashboard_activate() {
     if ($default_page) {
         wp_delete_post($default_page->ID, true);
     }
+
+    // 6. Check and delete the default Privacy Policy page
+    $privacy_policy_page = get_page_by_path('privacy-policy');
+    if ($privacy_policy_page) {
+        wp_delete_post($privacy_policy_page->ID, true);
+    }
 }
 
 // Hook into plugin activation
