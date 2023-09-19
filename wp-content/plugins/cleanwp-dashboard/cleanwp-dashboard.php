@@ -1,4 +1,11 @@
 <?php
+/*
+Plugin Name: cleanWP Dashboard
+Description: This plugin performs various cleanup tasks in the WordPress dashboard.
+Version: 1.0
+Author: Your Name
+*/
+
 function cleanwp_dashboard_activate() {
     // 1. Delete Post ID 1
     wp_delete_post(1, true);
@@ -17,6 +24,7 @@ function cleanwp_dashboard_activate() {
         delete_plugins(['akismet/akismet.php']);
     }
 
+    // 4. Set default permalink structure to post name
     update_option('permalink_structure', '/%postname%/');
 
     // 5. Delete the default "Sample Page"
