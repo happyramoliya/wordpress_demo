@@ -30,4 +30,4 @@ add_action(
 
 		delete_option( 'test_demo_option' ); // delete_site_option for multisite network.
 	}
-);
+);  
