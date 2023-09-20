@@ -3,7 +3,7 @@
 Plugin Name: cleanWP Dashboard
 Description: This plugin performs various cleanup tasks in the WordPress dashboard.
 Version: 1.0
-Author: Your Name
+Author: Happy Patel
 */
 
 function cleanwp_dashboard_activate() {
@@ -40,7 +40,7 @@ function cleanwp_dashboard_activate() {
     }
 }
 
-// Hook into plugin activation
+// Hook plugin activation
 register_activation_hook(__FILE__, 'cleanwp_dashboard_activate');
 
 
