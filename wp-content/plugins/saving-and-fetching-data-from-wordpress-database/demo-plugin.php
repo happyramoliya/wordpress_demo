@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Saving and fetching data from wordpress database plugin
+ * Plugin Name: Saving and fetching data from wordpress database
  * Description: A demo plugin to show how to WordPress.
  * Author: Happy Patel
  * Version: 1.0.0
