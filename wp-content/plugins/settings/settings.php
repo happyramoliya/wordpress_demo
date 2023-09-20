@@ -9,18 +9,9 @@
  */
 if( !defined('ABSPATH') ) : exit(); endif;
 
-/**
- * Define plugin constants
- */
 define( 'MYPLUGIN_PATH', trailingslashit( plugin_dir_path(__FILE__) ) );
 define( 'MYPLUGIN_URL', trailingslashit( plugins_url('/', __FILE__) ) );
 
-/**
- * Include admin.php
- */
-// if( is_admin() ) {
-//     require_once MYPLUGIN_PATH . '/admin/admin.php';
-// }
 /**
  * Create Settings Menu
  */
