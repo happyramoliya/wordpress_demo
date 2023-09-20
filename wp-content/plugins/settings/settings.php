@@ -18,9 +18,9 @@ define( 'MYPLUGIN_URL', trailingslashit( plugins_url('/', __FILE__) ) );
 /**
  * Include admin.php
  */
-if( is_admin() ) {
-    require_once MYPLUGIN_PATH . '/admin/admin.php';
-}
+// if( is_admin() ) {
+//     require_once MYPLUGIN_PATH . '/admin/admin.php';
+// }
 /**
  * Create Settings Menu
  */
