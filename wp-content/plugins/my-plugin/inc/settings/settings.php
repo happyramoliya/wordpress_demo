@@ -66,7 +66,7 @@ function myplugin_settings_init() {
         'myplugin-settings-page'
     );
 
-    // Registe input field
+    // Register input field
     register_setting(
         'myplugin-settings-page',
         'myplugin_settings_input_field',
