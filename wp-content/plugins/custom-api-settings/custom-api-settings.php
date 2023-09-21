@@ -2,6 +2,7 @@
 /*
 Plugin Name: Custom API Settings Plugin
 Description: This plugin saves API settings and provides a function to retrieve them.
+Author: Happy Patel
 Version: 1.0
 */
 
