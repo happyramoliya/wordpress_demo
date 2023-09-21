@@ -8,6 +8,7 @@ Version: 1.0
 function save_api_settings() {
     if (isset($_POST['api_key'])) {
         update_option('api_key', $_POST['api_key']);
+        echo "API Key saved successfully!";
     }
 }
 
