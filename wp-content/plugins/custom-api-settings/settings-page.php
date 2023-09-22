@@ -34,7 +34,6 @@ function display_api_data() {
                 echo '<strong>Age:</strong> ' . $employee['employee_age'];
                 echo '</li>';
             }
-
             echo '</ul>';
             echo '</div>';
         } else {
@@ -45,3 +44,12 @@ function display_api_data() {
 
 // Add a shortcode to display the API data
 add_shortcode('display_api_data', 'display_api_data');
+
+
+
+
+
+
+
+
+
