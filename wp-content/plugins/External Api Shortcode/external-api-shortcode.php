@@ -30,7 +30,7 @@ function callback_function( $atts ) {
         'external_data'
     );          
 
-    $url = 'https://dummy.restapiexample.com/api/v1/employees';
+    $url = 'https://jsonplaceholder.typicode.com/users';
     
     $arguments = array(
         'method' => 'GET' 
