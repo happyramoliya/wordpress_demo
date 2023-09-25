@@ -30,7 +30,7 @@ add_action( 'admin_menu', 'demo_custom_menu_page' );
  * Renders menu page.
  */
 function  demo_custom_menu_renderer() {
-    echo "<h1>Demo Menu Page</h1>";
+    echo "<h1>Demo External API Data</h1>";
 
     $posts_data = get_transient( 'demo_data' );
     // get_site_transient for multisite
