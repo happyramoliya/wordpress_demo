@@ -27,7 +27,7 @@ function demo_custom_menu_page() {
 add_action( 'admin_menu', 'demo_custom_menu_page' );
 
 /**
- * Renders menu page.
+ * Renders API Data.
  */
 function  demo_custom_menu_renderer() {
     echo "<h1>Demo External API Data</h1>";
