@@ -62,3 +62,10 @@ function display_api_data() {
 // Add a shortcode to display the API data
 add_shortcode('display_api_data', 'display_api_data');
 
+
+
+
+
+
+
+
