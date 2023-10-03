@@ -967,3 +967,39 @@ textarea {
 	margin-right: auto;
 	margin-bottom: 1.5em;
 }
+
+
+header#masthead {
+    background: blanchedalmond;
+    padding: 50px;
+}
+.container{
+		padding-top: 100px;
+		padding-bottom: 100px;
+		background-color: aliceblue;
+}
+
+.blogs-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.blog-item {
+    padding: 50px;
+    border: 1px solid;
+    border-radius: 50px;
+    background-color: darkcyan;
+}
+.blog-feature-image img {
+    width: 300px;
+    height: 300px;
+}
+
+.blog-date {
+    margin-top: 50px;
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+}
+
