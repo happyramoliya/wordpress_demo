@@ -9,7 +9,7 @@ Author: Your Name
 // Plugin code will go here
 function enqueue_custom_ajax_search_scripts() {
     wp_enqueue_script('custom-ajax-search-script', plugins_url('/js/custom-ajax-search.js', __FILE__), array('jquery'), '1.0', true);
-    wp_enqueue_style('custom-ajax-search-style', plugins_url('/css/custom-ajax-search.css', __FILE__), array(), '1.0');
+    // wp_enqueue_style('custom-ajax-search-style', plugins_url('/css/custom-ajax-search.css', __FILE__), array(), '1.0');
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_ajax_search_scripts');
 
