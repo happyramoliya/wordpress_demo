@@ -16,24 +16,32 @@ function enqueue_custom_ajax_search_scripts() {
 add_action('wp_enqueue_scripts', 'enqueue_custom_ajax_search_scripts');
 
 
+function custom_ajax_search_form() {
+    ob_start(); ?>
+    <form action="/" method="get" id="custom-ajax-search-form">
+        <input type="text" id="search" name="s" value="<?php the_search_query(); ?>" placeholder="Search..." />
+        <input type="submit" value="Search" />
+    </form>
+    <div id="search-results"></div>
+    <?php
+    return ob_get_clean();
+}
+
 function custom_ajax_search() {
     $search_query = $_GET['query'];
 
     $args = array(
-        's'           => $search_query,
-        'post_type'   => 'post', // Change to your custom post type if needed
-        'post_status' => 'publish',
-        'posts_per_page' => -1,
         's' => $search_query,
-        'post_type' => 'any',
+        'post_type' => 'post', // Change to your custom post type if needed
+        'post_status' => 'publish'
     );
 
     $search = new WP_Query($args);
 
     if ($search->have_posts()) {
         while ($search->have_posts()) : $search->the_post();
-            echo '<h2>' . get_the_title() . '</h2>';
-            echo '<div>' . get_the_content() . '</div>';
+            the_title();
+            // Display other information as needed
         endwhile;
         wp_reset_postdata();
     } else {
