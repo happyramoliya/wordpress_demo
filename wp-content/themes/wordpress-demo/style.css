@@ -978,9 +978,14 @@ header#masthead {
 		background-color: aliceblue;
 }
 .blogs-list{
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-around; */
+	display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+	row-gap: 50px;
+    align-items: center;
+    justify-items: center;
 }
 
 .blog-item {
