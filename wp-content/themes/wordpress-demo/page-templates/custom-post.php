@@ -3,6 +3,10 @@
 get_header();
 ?>
 
+<div>
+    <?php echo do_shortcode('[custom_ajax_search]');?>
+</div>
+
 <section class="blog-collection-content">
     <div class="container">
         <div class="blogs-list">
