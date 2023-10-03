@@ -6,7 +6,7 @@ jQuery(document).ready(function($) {
 
         $.ajax({
             url: ajaxurl,
-            type: 'post',
+            type: 'any',
             data: {
                 action: 'custom_ajax_search',
                 query: searchQuery
