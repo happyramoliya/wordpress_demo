@@ -7,7 +7,7 @@ get_header();
     <div class="container">
         <div class="blogs-list">
             <?php $the_query = new WP_Query(array(
-                'posts_per_page' => 3,
+                'posts_per_page' => -1,
                 'post_type' => 'post',
             )
             );?>
