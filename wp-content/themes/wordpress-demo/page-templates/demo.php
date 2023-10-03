@@ -1,6 +1,6 @@
 <?php
 //Template Name: ajax demo
-wp_head();
+get_header();
 ?>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -10,5 +10,5 @@ wp_head();
 <div id="data-container"></div>
 
 <?php
-wp_footer();
+get_footer();
 ?>
