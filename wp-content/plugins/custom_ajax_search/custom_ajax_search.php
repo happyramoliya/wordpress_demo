@@ -3,7 +3,7 @@
 Plugin Name: Custom Ajax Search
 Description: Implement Ajax-based search functionality.
 Version: 1.0
-Author: Your Name
+Author: Happy Patel
 */
 
 // Plugin code will go here
@@ -54,3 +54,8 @@ function custom_ajax_search_shortcode() {
     return custom_ajax_search_form();
 }
 add_shortcode('custom_ajax_search', 'custom_ajax_search_shortcode');
+    
+
+
+
+
