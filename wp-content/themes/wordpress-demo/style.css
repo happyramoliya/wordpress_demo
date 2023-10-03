@@ -968,7 +968,6 @@ textarea {
 	margin-bottom: 1.5em;
 }
 
-
 header#masthead {
     background: blanchedalmond;
     padding: 50px;
@@ -978,7 +977,6 @@ header#masthead {
 		padding-bottom: 100px;
 		background-color: aliceblue;
 }
-
 .blogs-list{
     display: flex;
     align-items: center;
@@ -990,12 +988,12 @@ header#masthead {
     border: 1px solid;
     border-radius: 50px;
     background-color: darkcyan;
+	width: 450px;
 }
 .blog-feature-image img {
     width: 300px;
     height: 300px;
 }
-
 .blog-date {
     margin-top: 50px;
     color: white;
