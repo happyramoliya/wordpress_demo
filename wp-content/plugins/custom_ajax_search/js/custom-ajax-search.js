@@ -1,18 +1,16 @@
 jQuery(document).ready(function($) {
-    $('#custom-ajax-search-form').on('submit', function(e) {
-        e.preventDefault();
-
+    $('#search-button').on('click', function() {
         var searchQuery = $('#search').val();
 
         $.ajax({
-            url: ajaxurl,
+            url: ajax_object.ajax_url,
             type: 'post',
             data: {
                 action: 'custom_ajax_search',
                 query: searchQuery
             },
             success: function(response) {
-                $('#search-results').html(response);
+                $('.blogs-list').html(response);
             }
         });
     });

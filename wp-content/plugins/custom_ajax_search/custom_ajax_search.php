@@ -28,21 +28,29 @@ function custom_ajax_search_form() {
 }
 
 function custom_ajax_search() {
-    $search_query = $_GET['query'];
+    $search_query = $_POST['query'];
 
     $args = array(
         's' => $search_query,
-        'post_type' => 'post', // Change to your custom post type if needed
+        'post_type' => 'post',
         'post_status' => 'publish'
     );
 
     $search = new WP_Query($args);
 
     if ($search->have_posts()) {
-        while ($search->have_posts()) : $search->the_post();
-            the_title();
-            // Display other information as needed
-        endwhile;
+        while ($search->have_posts()) : $search->the_post(); ?>
+            <div class="blog-item">
+                <div class="blog-feature-image">
+                    <a href="<?php the_permalink();?>"><img src="<?php echo get_the_post_thumbnail_url($post->ID, 'full'); ?>" alt="salesforce"></a>
+                    <div class="blog-date"><span><?php echo get_the_date('j F, Y'); ?></span></div>
+                </div>
+                <div class="blog-list-content">
+                    <h3><a href="<?php the_permalink();?>"><?php the_title();?></a></h3>
+                    <p><?php the_excerpt();?></p>
+                </div>
+            </div>
+        <?php endwhile;
         wp_reset_postdata();
     } else {
         echo 'No results found';
