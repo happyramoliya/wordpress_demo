@@ -18,7 +18,7 @@ add_action('wp_enqueue_scripts', 'enqueue_custom_ajax_search_scripts');
 
 function custom_ajax_search_form() {
     ob_start(); ?>
-    <form action="/" method="get" id="custom-ajax-search-form">
+    <form action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get" id="custom-ajax-search-form">
         <input type="text" id="search" name="s" value="<?php the_search_query(); ?>" placeholder="Search..." />
         <input type="submit" value="Search" />
     </form>
