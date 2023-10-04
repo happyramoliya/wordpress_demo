@@ -15,7 +15,6 @@ function enqueue_custom_ajax_search_scripts() {
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_ajax_search_scripts');
 
-
 function custom_ajax_search_form() {
     ob_start(); ?>
     <form action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get" id="custom-ajax-search-form">
